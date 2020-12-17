@@ -1,0 +1,55 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #f1faee;
+	color: black;
+	font-size: 1em;
+	font-family: 'Indie Flower', cursive;
+}
+
+.cheeseListView,
+.cheeseSingleView {
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
+}
+ul {
+	width: 300px;
+	margin-bottom: 2em;
+	border: 1px solid #b7b7a4;
+	padding: 3em;
+	border-radius: 5px;
+	background-color: #b7b7a4;
+	box-shadow: 6px 6px 14px 0px rgba(0, 0, 0, 0.75);
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+li {
+	list-style: none;
+	font-size: 1.5em;
+	margin-bottom: 1em;
+}
+
+h1 {
+	text-align: center;
+	text-transform: capitalize;
+	margin-bottom: 2em;
+}
+.links {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+	width: 300px;
+}
+.prev,
+.next {
+	font-size: 1.5em;
+	font-weight: 900;
+	text-transform: capitalize;
+}
