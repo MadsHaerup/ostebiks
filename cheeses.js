@@ -51,9 +51,9 @@ fetch(`https://oste-api.herokuapp.com/api/v1/cheeses?offset=${offset}`)
 
 // ────────────────────────────────────────────────────────────────────────────────
 var currentPage;
-if (url.get('offset') == 0) {
+if (url.get('offset') == 0 || url == '') {
 	currentPage = 1;
-} else {
+} else if (url.get('offset') == 5) {
 	currentPage = 2;
 }
 if (url.get('offset') == 10) {
