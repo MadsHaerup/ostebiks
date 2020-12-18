@@ -1,9 +1,10 @@
 let url = new URLSearchParams(window.location.search);
-//offset skal være = det her hvis linket findes : eller 1
+//offset skal være = det her hvis linket findes : eller 0
 let offset = url.get('offset') ? url.get('offset') : 0;
 let prevPage, nextPage;
 let nextLink = document.querySelector('.link.next');
 let prevLink = document.querySelector('.link.prev');
+
 // ────────────────────────────────────────────────────────────────────────────────
 
 fetch(`https://oste-api.herokuapp.com/api/v1/cheeses?offset=${offset}`)
@@ -16,6 +17,7 @@ fetch(`https://oste-api.herokuapp.com/api/v1/cheeses?offset=${offset}`)
 		//dividere objekterne med antal pr side
 		let pages = Math.ceil(data.count / 5);
 		console.log('totaltpages = ' + pages);
+
 		//bladre frem og tilbage i api'et
 		nextPage = offset >= pages ? 10 : parseInt(offset) + 5;
 		prevPage = offset <= 0 ? 0 : parseInt(offset) - 5;
@@ -46,3 +48,17 @@ fetch(`https://oste-api.herokuapp.com/api/v1/cheeses?offset=${offset}`)
 			cheeses.appendChild(clone);
 		});
 	});
+
+// ────────────────────────────────────────────────────────────────────────────────
+var currentPage;
+if (url.get('offset') == 0) {
+	currentPage = 1;
+} else {
+	currentPage = 2;
+}
+if (url.get('offset') == 10) {
+	currentPage = 3;
+}
+console.log(currentPage);
+
+document.querySelector('.currentPage').innerHTML = currentPage;

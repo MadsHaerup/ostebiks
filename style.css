@@ -1,16 +1,15 @@
+@import '/cheese-style.css';
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
-
 body {
 	background-color: #f1faee;
 	color: black;
 	font-size: 1em;
 	font-family: 'Indie Flower', cursive;
 }
-
 .cheeseListView,
 .cheeseSingleView {
 	display: grid;
@@ -35,7 +34,6 @@ li {
 	font-size: 1.5em;
 	margin-bottom: 1em;
 }
-
 h1 {
 	text-align: center;
 	text-transform: capitalize;
@@ -43,7 +41,7 @@ h1 {
 }
 .links {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
 	justify-items: center;
 	width: 300px;
 }
@@ -52,4 +50,8 @@ h1 {
 	font-size: 1.5em;
 	font-weight: 900;
 	text-transform: capitalize;
+	place-self: center;
+}
+.currentPage {
+	font-size: 1.8em;
 }
