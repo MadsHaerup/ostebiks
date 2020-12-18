@@ -3,18 +3,62 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Ostebiks</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ostebiks</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <h1>cheese list overview</h1>
+    <main class="cheeseListView">
+        <!-- <ul class="cheeses"></ul> -->
+        <ul class="inner cheeses">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="links">
+            <a href="?offset=?" class="link prev">prev</a>
+            <a href="#" class="currentPage"></a>
+            <a href="?offset=5" class="link next">next</a>
+        </div>
+    </main>
 
 
-  <script src="app.js" async defer></script>
+
+    <template id="template">
+        <li><a href="" class="cheese"></a></li>
+    </template>
+
+    <script src="cheeses.js" async defer></script>
 </body>
 
 </html>
