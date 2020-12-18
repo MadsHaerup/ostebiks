@@ -36,7 +36,7 @@ fetch(`https://oste-api.herokuapp.com/api/v1/cheeses?offset=${offset}`)
 			var id = result._id;
 
 			var queryUrl = `/offset=${offset}`;
-			url = queryUrl.split('/')[0] + `/cheese-sheet.html?id=${id}`;
+			url = queryUrl.split('/')[0] + `./cheese-sheet.html?id=${id}`;
 
 			//kloner hvert data objekt
 			let clone = template.content.cloneNode(true);
